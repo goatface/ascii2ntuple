@@ -1,5 +1,5 @@
 # What is it?
-This is a primitive basis for solving a Sudoku puzzle.  To run it, call `root in.C`
+This is a primitive basis for solving a Sudoku puzzle.  To run it, call `root in.C` (to quit ROOT, type `.q` at the root prompt)
 
 # Where is it from?
 
