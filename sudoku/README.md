@@ -3,7 +3,7 @@ This is a primitive basis for solving a Sudoku puzzle.  To run it, call `root in
 
 # Where is it from?
 
-The example puzzle was typed manually into puzzle1.txt from [https://en.wikipedia.org/wiki/Sudoku](the top most example on Wikipedia)
+The example puzzle was typed manually into puzzle1.txt from [the top most example on Wikipedia](https://en.wikipedia.org/wiki/Sudoku)
 
 # What did we do?
 
