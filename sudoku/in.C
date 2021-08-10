@@ -34,12 +34,12 @@
   const Int_t number_of_values=9;
   int solver[columns][rows][number_of_values] = {0};
 
-  for (int i=0;i<rows;i++) {
-    for (int j=0;j<columns;j++) {
-      for (int k=0;k<number_of_values;k++) {
-        solver[i][j][k]=-1;
+  for (int thisrow=0;thisrow<rows;thisrow++) {
+    for (int rowitem=0;rowitem<columns;rowitem++) {
+      for (int thisvalue=0;thisvalue<number_of_values;thisvalue++) {
+        solver[thisrow][rowitem][thisvalue]=-1;
         //solver[i][j][k]=solver[i][j][k]*-1;
-        cout << solver[i][j][k];
+        cout << solver[thisrow][rowitem][thisvalue];
       }
       cout << " ";
     }
