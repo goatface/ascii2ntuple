@@ -23,9 +23,9 @@
     cout << "This is the puzzle number: " << dataset<<  endl;
     for (Int_t i=0;i<rows;i++){
       myNTuple[dataset]->GetEntry(i);
-      for (Int_t goats=0;goats<9;goats++){
-        puzzle_entry[dataset][i][goats]=p[goats];
-        cout << puzzle_entry[dataset][i][goats] << " " ;
+      for (Int_t rowitem=0;rowitem<9;rowitem++){
+        puzzle_entry[dataset][i][rowitem]=p[rowitem];
+        cout << puzzle_entry[dataset][i][rowitem] << " " ;
       }
       cout << endl;
     }
