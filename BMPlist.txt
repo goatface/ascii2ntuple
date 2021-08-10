@@ -1,0 +1,10 @@
+./Data/data1.bmp
+./Data/data10.bmp
+./Data/data2.bmp
+./Data/data3.bmp
+./Data/data4.bmp
+./Data/data5.bmp
+./Data/data6.bmp
+./Data/data7.bmp
+./Data/data8.bmp
+./Data/data9.bmp
