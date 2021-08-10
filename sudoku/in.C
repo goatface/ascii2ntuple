@@ -10,7 +10,7 @@
   TFile *file[datasets];
   TNtuple *myNTuple[datasets];
   
-  Float_t puzzle_entry[datasets][columns][rows] = {0};
+  Float_t puzzle_entry[datasets][rows][columns] = {0};
 
   Float_t energy[datasets][entries], sfactor[datasets][entries];
   for(int dataset=0;dataset<datasets;dataset++){ 
@@ -34,9 +34,9 @@
   const Int_t number_of_values=9;
   int solver[columns][rows][number_of_values] = {0};
 
-  for (int i=0;i<9;i++) {
-    for (int j=0;j<9;j++) {
-      for (int k=0;k<9;k++) {
+  for (int i=0;i<rows;i++) {
+    for (int j=0;j<columns;j++) {
+      for (int k=0;k<number_of_values;k++) {
         solver[i][j][k]=-1;
         //solver[i][j][k]=solver[i][j][k]*-1;
         cout << solver[i][j][k];
