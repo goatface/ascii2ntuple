@@ -10,7 +10,7 @@
   TFile *file[datasets];
   TNtuple *myNTuple[datasets];
   
-  Float_t puzzle_entry[datasets][9][9] = {0};
+  Float_t puzzle_entry[datasets][columns][rows] = {0};
 
   Float_t energy[datasets][entries], sfactor[datasets][entries];
   for(int dataset=0;dataset<datasets;dataset++){ 
@@ -21,17 +21,18 @@
       myNTuple[dataset]->SetBranchAddress(parameter,&p[i]);
     }
     cout << "This is the puzzle number: " << dataset<<  endl;
-    for (Int_t i=0;i<rows;i++){
-      myNTuple[dataset]->GetEntry(i);
+    for (Int_t thisrow=0;thisrow<rows;thisrow++){
+      myNTuple[dataset]->GetEntry(thisrow);
       for (Int_t rowitem=0;rowitem<9;rowitem++){
-        puzzle_entry[dataset][i][rowitem]=p[rowitem];
-        cout << puzzle_entry[dataset][i][rowitem] << " " ;
+        puzzle_entry[dataset][thisrow][rowitem]=p[rowitem];
+        cout << puzzle_entry[dataset][thisrow][rowitem] << " " ;
       }
       cout << endl;
     }
     file[dataset]->Close();
   cout << "This is a solver array initialization" << endl; 
-  int solver[9][9][9] = {0};
+  const Int_t number_of_values=9;
+  int solver[columns][rows][number_of_values] = {0};
 
   for (int i=0;i<9;i++) {
     for (int j=0;j<9;j++) {
