@@ -15,4 +15,6 @@ A symlink was made at the command line as `ln -s puzzle1.txt.root 0.root` so we 
 
 # What's next?
 
-The primitive solver can be invoked by `root in.C` which must finally be modified near the bottom to actually solve the puzzle.  A possible solution is shown in `in_solved.C`
+The primitive solver can be invoked by `root in_skeleton.C` which must finally be modified near the bottom to actually solve the puzzle.  
+
+A possible solution is shown in `in_solved.C` which should take just a few hours of coding time to do yourself.
